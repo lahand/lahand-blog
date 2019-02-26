@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Editor.md Markdown</title>
+<link href="../static/css/style.css" rel="stylesheet" type="text/css" />
+<link href="../static/lib/editormd/css/editormd.css" rel="stylesheet"
+	type="text/css" />
+<link rel="shortcut icon"
+	href="https://pandao.github.io/editor.md/favicon.ico"
+	type="image/x-icon" />
+
+
+</head>
+<body>
+	<div id="layout">
+		<header>
+			<h1>${article.articleTitle}</h1>
+		</header>
+		<div id="test-editormd">
+			<textarea style="display: none;">[TOC]
+					${article.articleContent}
+			</textarea>
+		</div>
+	</div>
+	<script src="../static/lib/jquery.min.js"></script>
+	<script src="../static/lib/editormd/editormd.min.js"></script>
+	<script type="text/javascript">
+		var testEditor;
+
+		$(function() {
+			testEditor = editormd("test-editormd", {
+				width : "90%",
+				height : 640,
+				syncScrolling : "single",
+				path : "../static/lib/editormd/lib/"
+			});
+
+			/*
+			// or
+			testEditor = editormd({
+			    id      : "test-editormd",
+			    width   : "90%",
+			    height  : 640,
+			    path    : "../lib/"
+			});
+			 */
+		});
+	</script>
+</body>
+</body>
+</html>
