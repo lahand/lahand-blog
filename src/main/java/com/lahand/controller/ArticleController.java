@@ -22,4 +22,10 @@ public class ArticleController {
     	Article article = articleDAO.selectById(articleId);
         return new ModelAndView("/article/markdown","article",article);
     }
+    
+    @RequestMapping(value = "/detail")
+    public ModelAndView detail(ModelAndView modelAndView) {
+    	Article article = articleDAO.selectById(articleId);
+        return new ModelAndView("/article/articleDetail","article",article);
+    }
 }
