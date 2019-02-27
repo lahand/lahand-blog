@@ -117,7 +117,11 @@
                 <button id="toc-menu-btn">ToC Dropdown menu</button>
                 <button id="toc-default-btn">ToC default</button>
             </div>
-            <div id="test-editormd"></div>
+            <div id="test-editormd">
+	            <textarea style="display: none;">
+						${fullTemplateData}
+				</textarea>
+            </div>
         </div>
         <script src="../static/lib/jquery.min.js"></script>
         <script src="../static/lib/editormd/editormd.js"></script>   
@@ -126,12 +130,12 @@
             $(function() {
             	testEditor = editormd("test-editormd", {
                     width: "90%",
-                    height: 740,
+                    height: 640,
                     path : '../static/lib/editormd/lib/',
-                    theme : "dark",
-                    previewTheme : "dark",
-                    editorTheme : "pastel-on-dark",
-                    markdown : "asdfasdf",
+                    //theme : "dark",//菜单背景色
+                    //previewTheme : "dark",// 预览主题色
+                    //editorTheme : "pastel-on-dark",// 编辑主题色
+                    //markdown : "",
                     codeFold : true,
                     //syncScrolling : false,
                     saveHTMLToTextarea : true,    // 保存 HTML 到 Textarea
