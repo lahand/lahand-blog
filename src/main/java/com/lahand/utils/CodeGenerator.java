@@ -55,11 +55,11 @@ public class CodeGenerator {
 
      // 数据源配置
      DataSourceConfig dsc = new DataSourceConfig();
-     dsc.setUrl("jdbc:mysql://192.168.69.51:3306/test?useUnicode=true&useSSL=false&characterEncoding=utf8");
+     dsc.setUrl("jdbc:mysql://47.104.209.131:3306/lahand_blog?useUnicode=true&useSSL=false&characterEncoding=utf8");
      // dsc.setSchemaName("public");
      dsc.setDriverName("com.mysql.jdbc.Driver");
-     dsc.setUsername("root");
-     dsc.setPassword("mariadb");
+     dsc.setUsername("root2");
+     dsc.setPassword("ws20211031");
      mpg.setDataSource(dsc);
 
      // 包配置
@@ -114,7 +114,7 @@ public class CodeGenerator {
      strategy.setEntityLombokModel(true);
      strategy.setRestControllerStyle(true);
      //strategy.setSuperControllerClass("com.baomidou.ant.common.BaseController");
-     strategy.setInclude(scanner("表名"));
+     strategy.setInclude("blog_user");
      strategy.setSuperEntityColumns("id");
      strategy.setControllerMappingHyphenStyle(true);
      strategy.setTablePrefix(pc.getModuleName() + "_");

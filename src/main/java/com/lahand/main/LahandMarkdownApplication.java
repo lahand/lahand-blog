@@ -6,7 +6,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.ComponentScan;
 
 @SpringBootApplication
-@MapperScan("com.lahand.dao")
+@MapperScan("com.lahand.mapper")
 @ComponentScan("com.lahand.*")
 public class LahandMarkdownApplication {
 

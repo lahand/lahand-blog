@@ -5,10 +5,10 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.ModelAndView;
 
 @RestController
-@RequestMapping(value = "/home")
+@RequestMapping(value = "/")
 public class HomeController {
 	
-    @RequestMapping(value = "/index")
+    @RequestMapping
     public ModelAndView index(ModelAndView modelAndView) {
         return new ModelAndView("/home/index");
     }
